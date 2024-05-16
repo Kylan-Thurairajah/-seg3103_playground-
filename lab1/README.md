@@ -29,8 +29,7 @@ Ran these commands:
 
 Terminal Output:
 
-
-![lab1JUnitSS](htt![lab1ElixirSS](https://github.com/Kylan-Thurairajah/-seg3103_playground-/assets/115436152/1a064181-3a68-46df-8f4e-a764261671c6)
+(htt![lab1ElixirSS](https://github.com/Kylan-Thurairajah/-seg3103_playground-/assets/115436152/1a064181-3a68-46df-8f4e-a764261671c6)
 
 
 ExUnit:
