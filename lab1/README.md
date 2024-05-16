@@ -31,7 +31,6 @@ Terminal Output:
 
 
 ![lab1JUnitSS](htt![lab1ElixirSS](https://github.com/Kylan-Thurairajah/-seg3103_playground-/assets/115436152/1a064181-3a68-46df-8f4e-a764261671c6)
-ps://github.com/Kylan-Thurairajah/-seg3103_playground-/assets/115436152/314175a1-68a9-4435-b3d3-4fe79f84d6f8)
 
 
 ExUnit:
