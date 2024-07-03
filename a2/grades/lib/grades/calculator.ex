@@ -52,6 +52,11 @@ defmodule Grades.Calculator do
     0.2 * avg_labs + 0.3 * avg_homework + 0.2 * midterm + 0.3 * final
   end
 
+  def count_valid_labs(labs) do
+    labs
+    |> Enum.reject(&(&1 < 0.25))
+    |> Enum.count()
+  end
 
   def percentage_grade(%{homework: homework, labs: labs, midterm: midterm, final: final}) do
     avg_homework = average(homework)
@@ -66,13 +71,10 @@ defmodule Grades.Calculator do
     avg_labs = average(homework)
 
 
-    avg_exams = (midterm + final) / 2
+    avg_exams = average(midterm,final)
 
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
-
+    num_labs = count_valid_labs(labs)
+    
     failed_to_participate(avg_homework, avg_exams, avg_labs, num_labs, midterm, final, "letter")
 
   end
@@ -81,12 +83,10 @@ defmodule Grades.Calculator do
     avg_homework = average(homework)
     avg_labs = average(homework)
 
-    avg_exams = (midterm + final) / 2
+    avg_exams = average(midterm,final)
 
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
+    num_labs =  count_valid_labs(labs)
+
 
     failed_to_participate(avg_homework, avg_exams, avg_labs, num_labs, midterm, final, "numeric")
 
