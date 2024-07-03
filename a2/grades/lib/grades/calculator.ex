@@ -71,10 +71,10 @@ defmodule Grades.Calculator do
     avg_labs = average(homework)
 
 
-    avg_exams = average(midterm,final)
+    avg_exams = average([midterm,final])
 
     num_labs = count_valid_labs(labs)
-    
+
     failed_to_participate(avg_homework, avg_exams, avg_labs, num_labs, midterm, final, "letter")
 
   end
@@ -83,7 +83,7 @@ defmodule Grades.Calculator do
     avg_homework = average(homework)
     avg_labs = average(homework)
 
-    avg_exams = average(midterm,final)
+    avg_exams = average([midterm,final])
 
     num_labs =  count_valid_labs(labs)
 
