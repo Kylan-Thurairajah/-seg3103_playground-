@@ -76,7 +76,6 @@ defmodule Grades.Calculator do
     avg_homework = average(homework)
     avg_labs = average(homework)
 
-
     avg_exams = (midterm + final) / 2
 
     num_labs =
@@ -84,7 +83,7 @@ defmodule Grades.Calculator do
       |> Enum.reject(fn mark -> mark < 0.25 end)
       |> Enum.count()
 
-    failed_to_participate(avg_homework, avg_exams, avg_labs, num_labs, midterm, final, "letter")
+    failed_to_participate(avg_homework, avg_exams, avg_labs, num_labs, midterm, final, "numeric")
 
   end
 end
